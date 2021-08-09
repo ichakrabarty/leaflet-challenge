@@ -51,7 +51,7 @@ d3.json(equrl).then(data => {
                         radius: magnitudeSize(data.features[i].properties.mag),
                         color:  magnitudeDepth(data.features[i].geometry.coordinates[2]),
                         fillOpacity: 1
-                    }).bindPopup("<h2>" + data.features[i].properties.place + "</h2>" + "<p>" + Date(data.features[i].properties.time) + "</p>" + "<p>" + "magnitude: " + data.features[i].properties.mag + "</p>").addTo(myMap)
+                    }).bindPopup("<h2>" + data.features[i].properties.place + "</h2>" + "<p>" + Date(data.features[i].properties.time) + "</p>" + "<p>" + "magnitude: " + data.features[i].properties.mag + "</p>" + "<p>" + "depth: " + data.features[i].geometry.coordinates[2] + "</p>").addTo(myMap)
         }
 
         var legend = L.control({position: 'bottomleft'});
